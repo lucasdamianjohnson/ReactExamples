@@ -47,10 +47,10 @@ export class Accordion extends Component<
   }
 
   _toggleContainer() {
-    if(this.expanding)return;
+    if (this.expanding) return;
     if (!this.state.contentElement) return;
 
-    if(!this.state.expanded){
+    if (!this.state.expanded) {
       this.expanding = true;
     }
 
@@ -79,7 +79,7 @@ export class Accordion extends Component<
         >
           <div className="accordion-title-content">
             <div className="accordion-expand-icon-container">
-              <ArrowIcon className="accordion-expand-icon" fill="cyan" />
+              <ArrowIcon className="accordion-expand-icon" />
             </div>
             {this.props.titleContent}
           </div>

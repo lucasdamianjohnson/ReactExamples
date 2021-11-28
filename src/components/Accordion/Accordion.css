@@ -1,13 +1,4 @@
 
-.accordion-container.default {
-    --accordion-title-color : cyan;
-    --accordion-title-bg-color : rgba(22, 26, 31, 0.8);
-
-
-    --accordion-content-color : cyan;
-    --accordion-content-bg-color : rgba(29, 28, 28, 0.8);
-}
-
 .accordion-container {
 
     margin: none;
@@ -24,6 +15,7 @@
 .accordion-expand-icon {
     width : 10px;
     height : 10px;
+    fill : var(--accordion-expand-icon-color );
 } 
 
 .accordion-container .accordion-expand-icon {

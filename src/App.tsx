@@ -3,38 +3,49 @@ import React, { Component } from "react";
 import "./App.css";
 import Home from "./Pages/Home/Home";
 import About from "./Pages/About/About";
-import Accordions from "./Pages/Accordions/Accordions";
+import ComponentsPage from "./Pages/Components/Components";
+import SettingsPage from "./Pages/Settings/Settings";
 import Nav from "./components/Nav/Nav";
 
 interface AppProperties {}
 
 interface AppStates {
+  currentTheme: string;
   homePage: boolean;
-  accordionPage: boolean;
+  componentsPage: boolean;
   aboutPage: boolean;
+  settingsPage: boolean;
 }
 
 class App extends Component<AppProperties, AppStates> {
   constructor(props: AppProperties) {
     super(props);
     this.state = {
+      currentTheme: "default",
       homePage: true,
-      accordionPage: false,
+      componentsPage: false,
       aboutPage: false,
+      settingsPage: false,
     };
     this.setAppPage = this.setAppPage.bind(this);
+    this.setAppTheme = this.setAppTheme.bind(this);
+    this.getAppTheme = this.getAppTheme.bind(this);
   }
 
   setAppPage(name: string) {
     this.setState({ homePage: false });
     this.setState({ aboutPage: false });
-    this.setState({ accordionPage: false });
+    this.setState({ componentsPage: false });
+    this.setState({ settingsPage: false });
     switch (name) {
       case "home-page":
         this.setState({ homePage: true });
         break;
-      case "accordion-page":
-        this.setState({ accordionPage: true });
+      case "components-page":
+        this.setState({ componentsPage: true });
+        break;
+      case "settings-page":
+        this.setState({ settingsPage: true });
         break;
       case "about-page":
         this.setState({ aboutPage: true });
@@ -44,11 +55,33 @@ class App extends Component<AppProperties, AppStates> {
     }
   }
 
+  getAppTheme() {
+    return this.state.currentTheme;
+  }
+  setAppTheme(theme: string) {
+    this.setState({ currentTheme: theme });
+  }
+
+  _getAppClassName() {
+    let defaultClass = "app-main";
+
+    switch (this.state.currentTheme) {
+      case "default":
+        defaultClass += " default";
+        break;
+      case "light":
+        defaultClass += " light";
+        break;
+    }
+
+    return defaultClass;
+  }
+
   render() {
-    const { homePage, accordionPage, aboutPage } = this.state;
+    const { homePage, componentsPage, aboutPage, settingsPage } = this.state;
 
     return (
-      <div className="app-main default">
+      <div className={this._getAppClassName()}>
         <div className="meta-grid">
           <div className="meta-grid-nav">
             <Nav setAppPage={this.setAppPage} />
@@ -56,7 +89,8 @@ class App extends Component<AppProperties, AppStates> {
 
           <div className="meta-grid-content">
             {homePage && <Home />}
-            {accordionPage && <Accordions />}
+            {componentsPage && <ComponentsPage />}
+            {settingsPage && <SettingsPage  getAppTheme={this.getAppTheme}  setAppTheme={this.setAppTheme} />}
             {aboutPage && <About />}
           </div>
         </div>

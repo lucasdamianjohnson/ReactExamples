@@ -62,7 +62,7 @@ export class Nav extends Component<NavProperities, NavStates> {
           onClick={() => this._toggleExpand()}
         >
           <div className="react-example-nav-expand-button-container">
-              <MenuIcon className="react-example-nav-expand-button-icon" fill="cyan" stroke="cyan"/>
+              <MenuIcon className="react-example-nav-expand-button-icon" />
  
           </div>
         </button>
@@ -74,16 +74,22 @@ export class Nav extends Component<NavProperities, NavStates> {
             Home
           </button>
           <button
-            className={this._checkActiveButton("accordion-page")}
-            onClick={() => this.setActive("accordion-page")}
+            className={this._checkActiveButton("components-page")}
+            onClick={() => this.setActive("components-page")}
           >
-            Accordions
+            Components
+          </button>
+          <button
+            className={this._checkActiveButton("settings-page")}
+            onClick={() => this.setActive("settings-page")}
+          >
+            Settings
           </button>
           <button
             className={this._checkActiveButton("about-page")}
             onClick={() => this.setActive("about-page")}
           >
-            About
+            ?
           </button>
         </nav>
       </div>

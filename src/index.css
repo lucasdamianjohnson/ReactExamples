@@ -1,75 +1,138 @@
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-family: "Lucida Console", "Courier New", monospace;
 
-  background: rgb(49,80,97);
-  background: linear-gradient(65deg, rgba(49,80,97,1) 0%, rgba(41,55,57,1) 50%, rgba(62,84,114,0.94) 99%); 
   height: 100%;
-  background-color: var(--app-bg);
 }
 
 html {
+
+
   height: 100%;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
 
 #root {
-  overflow: hidden;
   height: 100%;
 }
 
 .app-main.default {
-  --app-bg : rgba(0.5,0.5,0.5,.5);
+  background: linear-gradient(
+    65deg,
+    rgba(49, 80, 97, 1) 0%,
+    rgba(41, 55, 57, 1) 50%,
+    rgba(62, 84, 114, 0.94) 99%
+  );
 
-  --nav-bg : rgba(0.5,0.5,0.5,.5);
-  --nav-button-color : rgb(97, 207, 203);
-  --nav-button-bg : rgba(0, 0, 0, 0.822);
-  --nav-button-active-color : rgb(32, 32, 32);
+  --divine-star-logo-color: cyan;
 
+  --app-default-color: rgb(163, 255, 252);
+  --app-bg: rgba(0.5, 0.5, 0.5, 0.5);
 
-  --app-content-bg : rgba(0.5,0.5,0.5,.5); 
- 
-  --app-page-title-container-color :rgb(16, 175, 170);
-  --app-page-title-container-bottom-color :rgb(11, 117, 114);
-  --app-page-title-color :  rgb(21, 27, 27);
-  --app-section-title-color : rgb(172, 223, 221);
+  --nav-expand-button: rgb(97, 207, 203);
+  --nav-bg: rgba(0.5, 0.5, 0.5, 0.5);
+  --nav-button-color: rgb(97, 207, 203);
+  --nav-button-bg: rgba(0, 0, 0, 0.822);
+  --nav-button-active-color: rgb(32, 32, 32);
 
-  --info-box-bg-color : rgba(1, 1, 1, 0.671); 
-  --info-box-text-color  : rgb(111, 197, 194);
+  --app-content-bg: rgba(0.5, 0.5, 0.5, 0.5);
+
+  --app-page-title-container-color: rgb(16, 175, 170);
+  --app-page-title-container-bottom-color: rgb(11, 117, 114);
+  --app-page-title-color: rgb(21, 27, 27);
+  --app-section-title-color: rgb(172, 223, 221);
+
+  --info-box-bg-color: rgba(1, 1, 1, 0.671);
+  --info-box-text-color: rgb(111, 197, 194);
+
+  --accordion-expand-icon-color: cyan;
+  --accordion-title-color: cyan;
+  --accordion-title-bg-color: rgba(22, 26, 31, 0.8);
+  --accordion-content-color: cyan;
+  --accordion-content-bg-color: rgba(29, 28, 28, 0.8);
 }
 
-.app-main {
-  height: 100%;
+.app-main.light {
+  background: linear-gradient(
+    65deg,
+    rgb(219, 219, 219) 0%,
+    rgb(240, 247, 248) 50%,
+    rgba(231, 237, 247, 0.94) 99%
+  );
+
+  --divine-star-logo-color: rgb(13, 14, 13);
+
+  --app-default-color: rgb(13, 14, 13);
+  --app-bg: rgba(255, 255, 255, 0.5);
+
+  --nav-expand-button: rgb(21, 29, 29);
+  --nav-bg: rgba(255, 255, 255, 0.5);
+  --nav-button-color: rgb(21, 29, 29);
+  --nav-button-bg: rgba(241, 241, 241, 0.822);
+  --nav-button-active-color: rgb(243, 243, 243);
+
+  --app-content-bg: rgba(226, 226, 226, 0.5);
+
+  --app-page-title-container-color: rgb(207, 218, 218);
+  --app-page-title-container-bottom-color: rgb(16, 17, 17);
+  --app-page-title-color: rgb(59, 59, 59);
+  --app-section-title-color: rgb(32, 34, 34);
+
+  --info-box-bg-color: rgba(214, 214, 214, 0.671);
+  --info-box-text-color: rgb(43, 46, 46);
+
+  --accordion-expand-icon-color: rgb(37, 37, 37);
+  --accordion-title-color: rgb(37, 37, 37);
+  --accordion-title-bg-color: rgba(255, 255, 255, 0.5);
+  --accordion-content-color: rgb(32, 32, 32);
+  --accordion-content-bg-color: rgba(255, 255, 255, 0.5);
 }
+
 @media only screen and (max-width: 800px) {
+  .app-main {
+    overflow: hidden;
+    background-color: var(--app-content-bg);
+    width: 100%;
+    height: 100%;
+  }
   .meta-grid {
+    overflow-y: scroll;
+    background-color: var(--app-content-bg);
+    width: 100%;
     height: 100%;
     display: block;
   }
   .meta-grid-nav {
     overflow: hidden;
-
+    width: 100%;
     background-color: var(--nav-bg);
   }
   .meta-grid-content {
-
+    background-color: var(--app-content-bg);
+    overflow-y: scroll;
     width: 100%;
     height: 100%;
-    overflow: hidden;
   }
 
+  .app-content {
+    height: 100%;
+    width: 100%;
+  }
 }
 
 @media only screen and (min-width: 800px) {
+  .app-main {
+    overflow: hidden;
+    height: 100%;
+  }
   .meta-grid {
     height: 100%;
     display: grid;
@@ -81,15 +144,21 @@ code {
     background-color: var(--nav-bg);
   }
   .meta-grid-content {
-
     width: 98%;
     height: 98%;
     padding: 10px;
     overflow: hidden;
   }
+
+  .app-content {
+    height: 100%;
+    width: 100%;
+    overflow-y: scroll;
+  }
 }
 
 .meta-grid {
+  width: 100%;
   height: 100%;
 }
 .meta-grid-nav {
@@ -97,45 +166,60 @@ code {
   background-color: var(--nav-bg);
 }
 .meta-grid-content {
-
 }
-
-
 
 .app-content {
   background-color: var(--app-content-bg);
-  height: 100%;
-  width: 100%;
-  overflow-y: scroll;
-  --fadeInTime : .3s;
-  animation: fadeIn var( --fadeInTime);
-  -webkit-animation: fadeIn var( --fadeInTime);
-  -moz-animation: fadeIn var( --fadeInTime);
-  -o-animation: fadeIn var( --fadeInTime);
-  -ms-animation: fadeIn var( --fadeInTime);
+
+  --fadeInTime: 0.3s;
+  animation: fadeIn var(--fadeInTime);
+  -webkit-animation: fadeIn var(--fadeInTime);
+  -moz-animation: fadeIn var(--fadeInTime);
+  -o-animation: fadeIn var(--fadeInTime);
+  -ms-animation: fadeIn var(--fadeInTime);
 }
 
 @keyframes fadeIn {
-  0% {opacity:0;}
-  100% {opacity:1;}
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 @-moz-keyframes fadeIn {
-  0% {opacity:0;}
-  100% {opacity:1;}
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 @-webkit-keyframes fadeIn {
-  0% {opacity:0;}
-  100% {opacity:1;}
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 @-o-keyframes fadeIn {
-  0% {opacity:0;}
-  100% {opacity:1;}
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 @-ms-keyframes fadeIn {
-  0% {opacity:0;}
-  100% {opacity:1;}
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }

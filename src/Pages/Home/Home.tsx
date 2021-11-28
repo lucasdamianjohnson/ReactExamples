@@ -21,7 +21,7 @@ export class Home extends Component<HomeProperities, HomeStates> {
       <div className="app-content">
         <PageTitle title="Home" />
         <div className='divine-star-logo-container'>
-        <DivineStarLogo className='divine-star-logo' fill='cyan' />  
+        <DivineStarLogo className='divine-star-logo' />  
         </div>
         <InfoBox
           content={

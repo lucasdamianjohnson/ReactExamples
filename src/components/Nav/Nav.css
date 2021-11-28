@@ -24,6 +24,7 @@
 }
 .react-example-nav-expand-button-icon {
     text-align: right;
+    fill : var(--nav-expand-button)
 }
 
 
@@ -68,7 +69,10 @@ button.nav-button {
    border-bottom: 1px solid var(--nav-button-color);
    letter-spacing: 4px;
    font-weight: 800;
-
+}
+button.nav-button:focus {
+    outline: none;
+    border : none;
 }
 
 button.nav-button.active {

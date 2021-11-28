@@ -1,19 +1,21 @@
 import { Component } from "react";
 import { PageTitle } from "../../components/Titles/PageTitle/PageTitle";
+import { SectionTitle } from "../../components/Titles/SectionTitle/SectionTitle";
 
 import { Accordion } from "../../components/Accordion/Accordion";
 import { LoremIpsum } from "react-lorem-ipsum";
-type AccordionsProperities = {};
-type AccordionsStates = {};
+type ComponentsPageProperities = {};
+type ComponentsPageStates = {};
 
-export class Accordions extends Component<
-  AccordionsProperities,
-  AccordionsStates
+export class ComponentsPage extends Component<
+  ComponentsPageProperities,
+  ComponentsPageStates
 > {
   render() {
     return (
       <div className="app-content">
-        <PageTitle title="Accordions" />
+        <PageTitle title="Components" />
+        <SectionTitle title="Accordions" />
         <Accordion
           titleContent={<span>accordion 1</span>}
           mainContent={<LoremIpsum p={2} />}
@@ -55,4 +57,4 @@ export class Accordions extends Component<
   }
 }
 
-export default Accordions;
+export default ComponentsPage;
