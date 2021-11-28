@@ -12,7 +12,11 @@ export class Accordions extends Component<AccordionsProperities, AccordionsState
       <div className="app-content">
         <PageTitle title="Accordions" />
         <Accordion 
-        titleContent={<span>test 1</span>}
+        titleContent={<span>accordion 1</span>}
+        mainContent={<p>Some Content</p>}
+        /> 
+      <Accordion 
+        titleContent={<span>accordion 2</span>}
         mainContent={<p>Some Content</p>}
         /> 
       </div>

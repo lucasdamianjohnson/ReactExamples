@@ -26,7 +26,7 @@ export class Accordion extends Component<
   }
 
   _getAccordionClass() {
-    let returnClass = "accordion-container";
+    let returnClass = "accordion-container default";
 
     if (this.state.expanded) {
       returnClass += " expanded";
@@ -38,8 +38,14 @@ export class Accordion extends Component<
   render() {
     return (
       <div className={this._getAccordionClass()}>
-        <div className="accordion-title">{this.props.titleContent} <ArrowIcon className='accordion-expand-icon' fill='current' />  </div>
-        <div className="accordion-content">{this.props.mainContent}</div>
+        <div className="accordion-title" onClick={ () => this._toggleContainer() }>
+          <div className="accordion-title-content">
+          <div className="accordion-expand-icon-container">
+           <ArrowIcon className='accordion-expand-icon' fill='cyan' />  
+           </div>{this.props.titleContent}</div>
+           </div>
+           <div className="accordion-content">{this.props.mainContent}</div>
+        
       </div>
     );
   }
