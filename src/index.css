@@ -5,9 +5,103 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-family: "Lucida Console", "Courier New", monospace;
+
+  background: rgb(49,80,97);
+  background: linear-gradient(65deg, rgba(49,80,97,1) 0%, rgba(41,55,57,1) 50%, rgba(62,84,114,0.94) 99%); 
+  height: 100%;
+  background-color: var(--app-bg);
+}
+
+html {
+  height: 100%;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+#root {
+  overflow: hidden;
+  height: 100%;
+}
+
+.app-main.default {
+  --app-bg : rgba(0.5,0.5,0.5,.5);
+
+  --nav-bg : rgba(0.5,0.5,0.5,.5);
+  --nav-button-color : rgb(97, 207, 203);
+  --nav-button-bg : rgba(0, 0, 0, 0.822);
+  --nav-button-active-color : rgb(32, 32, 32);
+
+
+  --app-content-bg : rgba(0.5,0.5,0.5,.5); 
+ 
+  --app-page-title-container-color :rgb(16, 175, 170);
+  --app-page-title-container-bottom-color :rgb(11, 117, 114);
+  --app-page-title-color :  rgb(21, 27, 27);
+  --app-section-title-color : rgb(172, 223, 221);
+
+  --info-box-bg-color : rgba(1, 1, 1, 0.671); 
+  --info-box-text-color  : rgb(111, 197, 194);
+}
+
+.app-main {
+  height: 100%;
+}
+@media only screen and (max-width: 800px) {
+  .meta-grid {
+    height: 100%;
+    display: block;
+  }
+  .meta-grid-nav {
+    overflow: hidden;
+
+    background-color: var(--nav-bg);
+  }
+  .meta-grid-content {
+
+    width: 98%;
+    height: 98%;
+    padding: 10px;
+    overflow: hidden;
+  }
+
+}
+
+@media only screen and (min-width: 800px) {
+  .meta-grid {
+    height: 100%;
+    display: grid;
+    grid-template-columns: 20% 80%;
+  }
+  .meta-grid-nav {
+    overflow: hidden;
+    max-height: 100%;
+    background-color: var(--nav-bg);
+  }
+  .meta-grid-content {
+
+    width: 98%;
+    height: 98%;
+    padding: 10px;
+    overflow: hidden;
+  }
+}
+
+.meta-grid {
+  height: 100%;
+}
+.meta-grid-nav {
+  overflow: hidden;
+  background-color: var(--nav-bg);
+}
+.meta-grid-content {
+}
+.app-content {
+  background-color: var(--app-content-bg);
+  height: 100%;
+  width: 100%;
+  overflow-y: scroll;
 }

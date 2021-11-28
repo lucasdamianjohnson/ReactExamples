@@ -1,0 +1,74 @@
+.react-example-nav-container {
+    width:100%;
+    overflow: hidden;
+    height: 100%;
+}
+.react-example-nav {
+    background-color: var(--nav-bg);
+    width:100%;
+    overflow: hidden;
+    height: 100%;
+}
+.react-example-nav-expand-button {
+    width:100%;
+    background-color: var(--nav-bg);
+    border:none;
+}
+.react-example-nav-expand-button-container {
+    width : 20px;
+    height : 20px;
+    display: flex;
+    align-items: right;
+    text-align: right;
+}
+.react-example-nav-expand-button-icon {
+    text-align: right;
+}
+
+
+@media only screen and (max-width: 800px) {
+    .react-example-nav.expanded {
+            height: 100%;
+            display: grid;
+            grid-auto-rows: 10%; 
+    }
+    .react-example-nav {
+        display: none;
+
+}
+    .react-example-nav-expand-button {
+        display: block;
+    }
+
+}
+@media only screen and (min-width: 800px) {
+     .react-example-nav-expand-button {
+         display: none;
+     }
+     .react-example-nav {
+        display: grid;
+        grid-auto-rows: 5%;
+    }
+}
+
+button.nav-button {
+   color: var(--nav-button-color);
+   background-color: var(--nav-button-bg);
+   border: none;
+   border-bottom: 1px solid var(--nav-button-color);
+   letter-spacing: 4px;
+   font-weight: 800;
+
+}
+
+button.nav-button.active {
+    background-color: var(--nav-button-color);
+    color: var( --nav-button-active-color );
+ 
+}
+
+button.nav-button:hover {
+    background-color: var(--nav-button-color);
+    color: var( --nav-button-active-color );
+
+}

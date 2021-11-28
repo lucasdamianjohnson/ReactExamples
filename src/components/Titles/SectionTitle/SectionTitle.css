@@ -1,0 +1,5 @@
+.section-title {
+    font-size: 2vw;
+    padding-left: 10px;
+    color: var(--app-section-title-color);  
+}
