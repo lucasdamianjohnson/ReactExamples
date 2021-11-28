@@ -1,6 +1,12 @@
 .theme-select-radio-container {
     color: var(--app-default-color);   
-}
+    border: 1px solid var(--app-default-color);   
+    line-height: 25px;
+    margin-left: 20px;
+    padding-left: 20px;
+    width : 250px;
+  }
+
 
 
 
@@ -15,7 +21,7 @@ input[type=radio] + label:before,
 input[type=checkbox] + label:before{
   height:12px;
   width:12px;
-  margin-right: 2px;
+  margin-right: 10px;
   content: " ";
   display:inline-block;
   vertical-align: baseline;
@@ -31,7 +37,13 @@ input[type=checkbox]:checked + label:before{
 
 input[type=radio] + label:before{
     border-radius:2px;
+ 
 }
 input[type=checkbox] + label:before{
   border-radius:2px;
+}
+
+input[type=radio]  label {
+  display: none;
+
 }

@@ -2,12 +2,12 @@ import { Component } from "react";
 import "./Radio.css";
 
 export type RadioSet = {
-    title: string;
-    name: string;
-    onClick: Function;
-    bind: any;
-    checked : boolean;
-}
+  title: string;
+  name: string;
+  onClick: Function;
+  bind: any;
+  checked: boolean;
+};
 
 type RadioProperities = {
   containerClass: string;
@@ -29,14 +29,14 @@ export class RadioComponent extends Component<RadioProperities, RadioStates> {
       const name = radio.name;
       const checked = radio.checked;
       returnHTML.push(
-        <div className={this.props.containerClass}>
+        <div>
           <input
-          checked={checked}
+            checked={checked}
             id={title}
             name={name}
             type="radio"
-            onClick={(event : any) => {
-              radio.onClick.call(radio.bind,event);
+            onClick={(event: any) => {
+              radio.onClick.call(radio.bind, event);
             }}
           />
           <label htmlFor={title}>{title}</label>
@@ -44,7 +44,7 @@ export class RadioComponent extends Component<RadioProperities, RadioStates> {
       );
     }
 
-    return returnHTML;
+    return <div className={this.props.containerClass}>{returnHTML}</div>;
   }
 }
 

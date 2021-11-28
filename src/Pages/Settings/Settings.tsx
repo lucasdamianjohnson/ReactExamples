@@ -33,7 +33,7 @@ export class SettingsPage extends Component<
     radioSet.push({
       checked : this.props.getAppTheme() == "default",
       name: themeRadioName,
-      title: "Default",
+      title: "Dark Cyan",
       onClick: () => {
         this._changeTheme("default");
       },
