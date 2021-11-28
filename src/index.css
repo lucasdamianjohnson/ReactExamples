@@ -62,9 +62,8 @@ code {
   }
   .meta-grid-content {
 
-    width: 98%;
-    height: 98%;
-    padding: 10px;
+    width: 100%;
+    height: 100%;
     overflow: hidden;
   }
 
@@ -74,7 +73,7 @@ code {
   .meta-grid {
     height: 100%;
     display: grid;
-    grid-template-columns: 20% 80%;
+    grid-template-columns: 25% 75%;
   }
   .meta-grid-nav {
     overflow: hidden;
@@ -98,10 +97,45 @@ code {
   background-color: var(--nav-bg);
 }
 .meta-grid-content {
+
 }
+
+
+
 .app-content {
   background-color: var(--app-content-bg);
   height: 100%;
   width: 100%;
   overflow-y: scroll;
+  --fadeInTime : .3s;
+  animation: fadeIn var( --fadeInTime);
+  -webkit-animation: fadeIn var( --fadeInTime);
+  -moz-animation: fadeIn var( --fadeInTime);
+  -o-animation: fadeIn var( --fadeInTime);
+  -ms-animation: fadeIn var( --fadeInTime);
+}
+
+@keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
+@-moz-keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
+@-webkit-keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
+@-o-keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
+@-ms-keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
 }

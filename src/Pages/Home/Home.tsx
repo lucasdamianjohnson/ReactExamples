@@ -5,6 +5,7 @@ import logo from "../../icons/logo.svg";
 import PageTitle from "../../components/Titles/PageTitle/PageTitle";
 import SectionTitle from "../../components/Titles/SectionTitle/SectionTitle";
 import InfoBox from "../../components/Block/InfoBox/InfoBox";
+import { ReactComponent as DivineStarLogo }  from "../../icons/divinestar.svg";
 
 type HomeProperities = {};
 
@@ -19,6 +20,9 @@ export class Home extends Component<HomeProperities, HomeStates> {
     return (
       <div className="app-content">
         <PageTitle title="Home" />
+        <div className='divine-star-logo-container'>
+        <DivineStarLogo className='divine-star-logo' fill='cyan' />  
+        </div>
         <InfoBox
           content={
             <div>

@@ -10,3 +10,17 @@
     display: flex;
     align-items: center;
 }
+
+.divine-star-logo {
+    margin: auto;
+    width :100px;
+    height: 100px;
+    padding: none;
+}
+
+.divine-star-logo-container {
+
+    text-align: center;
+    display: flex;
+    align-items: center;
+}
