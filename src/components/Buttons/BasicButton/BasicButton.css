@@ -1,0 +1,16 @@
+.default-basic-button {
+  background: none;
+  color: var(--app-default-color);
+  border: 1px solid var(--app-default-color);
+  padding: 10px;
+  font-size: 15px;
+  font-family: "Lucida Console", "Courier New", monospace;
+  transition: .5s background;
+}
+
+.default-basic-button:hover {
+  background: var(--app-default-color);
+  color: var(--app-default-dark-color);
+  transition: .5s background;
+}
+

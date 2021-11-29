@@ -1,9 +1,9 @@
 import { Component } from "react";
 import "./Settings.css";
-import { PageTitle } from "../../components/Titles/PageTitle/PageTitle";
-import { SectionTitle } from "../../components/Titles/SectionTitle/SectionTitle";
+import { PageTitle } from "../../components/Titles/PageTitle/PageTitle.component";
+import { SectionTitle } from "../../components/Titles/SectionTitle/SectionTitle.component";
 
-import { RadioComponent, RadioSet } from "../../components/Forms/Radio/Radio";
+import { RadioComponent, RadioSet } from "../../components/Forms/Radio/RadioGroup.component";
 
 type SettingsProperities = {
   getAppTheme : () => string;

@@ -18,6 +18,8 @@
     width :100px;
     height: 100px;
     padding: none;
+    margin-top: 10px;
+    margin-bottom: 20px;
     fill : var(--divine-star-logo-color);
 }
 
@@ -27,3 +29,5 @@
     display: flex;
     align-items: center;
 }
+
+

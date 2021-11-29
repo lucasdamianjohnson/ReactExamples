@@ -1,5 +1,5 @@
 import { Component } from "react";
-import "./Radio.css";
+import "./RadioGroup.css";
 
 export type RadioSet = {
   title: string;

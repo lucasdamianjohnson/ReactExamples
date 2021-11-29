@@ -1,5 +1,5 @@
 import { Component } from "react";
-import { PageTitle } from "../../components/Titles/PageTitle/PageTitle";
+import { PageTitle } from "../../components/Titles/PageTitle/PageTitle.component";
 type AboutProperities = {};
 
 type AboutStates = {};

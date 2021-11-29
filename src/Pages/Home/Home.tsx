@@ -2,9 +2,9 @@ import { Component } from "react";
 
 import "./Home.css";
 import logo from "../../icons/logo.svg";
-import PageTitle from "../../components/Titles/PageTitle/PageTitle";
-import SectionTitle from "../../components/Titles/SectionTitle/SectionTitle";
-import InfoBox from "../../components/Block/InfoBox/InfoBox";
+import PageTitle from "../../components/Titles/PageTitle/PageTitle.component";
+import SectionTitle from "../../components/Titles/SectionTitle/SectionTitle.component";
+import InfoBox from "../../components/Cards/InfoBox/InfoBox.component";
 import { ReactComponent as DivineStarLogo }  from "../../icons/divinestar.svg";
 
 type HomeProperities = {};
