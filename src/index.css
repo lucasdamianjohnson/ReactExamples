@@ -56,6 +56,46 @@ code {
   --accordion-content-bg-color: rgba(29, 28, 28, 0.8);
 }
 
+.app-main.divine {
+  background: linear-gradient(
+    65deg,
+    rgb(49, 14, 63) 0%,
+    rgb(19, 6, 22) 50%,
+    rgba(27, 10, 34, 0.94) 99%
+  );
+
+  --divine-purple-1 :  rgb(164, 15, 209);
+
+  --divine-star-logo-color: var(--divine-purple-1);
+
+  --app-default-color:  var(--divine-purple-1);
+  --app-default-dark-color: rgb(18, 19, 19);
+  --app-bg: rgba(0.5, 0.5, 0.5, 0.5);
+
+  --nav-expand-button:  var(--divine-purple-1);
+  --nav-bg: rgba(0.5, 0.5, 0.5, 0.5);
+  --nav-button-color:  var(--divine-purple-1);
+  --nav-button-bg: rgba(0, 0, 0, 0.822);
+  --nav-button-active-color: rgb(32, 32, 32);
+
+  --app-content-bg: rgba(0.5, 0.5, 0.5, 0.5);
+
+  --app-page-title-container-color: var(--divine-purple-1);
+  --app-page-title-container-bottom-color:  var(--divine-purple-1);
+  --app-page-title-color: rgb(21, 27, 27);
+  --app-section-title-color:  var(--divine-purple-1);
+
+  --info-box-bg-color: rgba(1, 1, 1, 0.671);
+  --info-box-text-color: var(--divine-purple-1);
+
+  --accordion-expand-icon-color:  var(--divine-purple-1);
+  --accordion-title-color:  var(--divine-purple-1);
+  --accordion-title-bg-color: rgba(22, 26, 31, 0.8);
+  --accordion-content-color: var(--divine-purple-1);
+  --accordion-content-bg-color: rgba(29, 28, 28, 0.8);
+
+}
+
 .app-main.light {
   background: linear-gradient(
     65deg,
@@ -221,4 +261,22 @@ code {
   100% {
     opacity: 1;
   }
+}
+
+
+.divine-star-logo {
+  margin: auto;
+  width :100px;
+  height: 100px;
+  padding: none;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  fill : var(--divine-star-logo-color);
+}
+
+.divine-star-logo-container {
+
+  text-align: center;
+  display: flex;
+  align-items: center;
 }

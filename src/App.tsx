@@ -69,6 +69,9 @@ class App extends Component<AppProperties, AppStates> {
       case "default":
         defaultClass += " default";
         break;
+      case "divine":
+        defaultClass += " divine";
+        break;
       case "light":
         defaultClass += " light";
         break;
@@ -90,7 +93,12 @@ class App extends Component<AppProperties, AppStates> {
           <div className="meta-grid-content">
             {homePage && <Home />}
             {componentsPage && <ComponentsPage />}
-            {settingsPage && <SettingsPage  getAppTheme={this.getAppTheme}  setAppTheme={this.setAppTheme} />}
+            {settingsPage && (
+              <SettingsPage
+                getAppTheme={this.getAppTheme}
+                setAppTheme={this.setAppTheme}
+              />
+            )}
             {aboutPage && <About />}
           </div>
         </div>

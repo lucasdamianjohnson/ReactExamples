@@ -5,7 +5,7 @@ import logo from "../../icons/logo.svg";
 import PageTitle from "../../components/Titles/PageTitle/PageTitle.component";
 import SectionTitle from "../../components/Titles/SectionTitle/SectionTitle.component";
 import InfoBox from "../../components/Cards/InfoBox/InfoBox.component";
-import { ReactComponent as DivineStarLogo }  from "../../icons/divinestar.svg";
+import { ReactComponent as DivineStarLogo } from "../../icons/divinestar.svg";
 
 type HomeProperities = {};
 
@@ -20,8 +20,8 @@ export class Home extends Component<HomeProperities, HomeStates> {
     return (
       <div className="app-content">
         <PageTitle title="Home" />
-        <div className='divine-star-logo-container'>
-        <DivineStarLogo className='divine-star-logo' />  
+        <div className="divine-star-logo-container">
+          <DivineStarLogo className="divine-star-logo" />
         </div>
         <InfoBox
           content={
@@ -33,9 +33,11 @@ export class Home extends Component<HomeProperities, HomeStates> {
               <p className="info-box-text">
                 This is a website made by Lucas Johnson. It was built using
                 react and hosted using github pages. This was created to serve
-                as an example site for Luke's portfolio. Below you find links to
-                various examples. You can also use the nav to check out all of
-                the examples.
+                as an example site for Luke's portfolio.
+              </p>
+              <br />
+              <p className="info-box-text">
+                Check out the settings page to switch the theme.
               </p>
             </div>
           }
