@@ -1,26 +1,26 @@
 {
   "files": {
-    "main.css": "/ReactExamples/static/css/main.2573f41c.chunk.css",
-    "main.js": "/ReactExamples/static/js/main.d1836932.chunk.js",
-    "main.js.map": "/ReactExamples/static/js/main.d1836932.chunk.js.map",
-    "runtime-main.js": "/ReactExamples/static/js/runtime-main.3aacefd4.js",
-    "runtime-main.js.map": "/ReactExamples/static/js/runtime-main.3aacefd4.js.map",
-    "static/js/2.648baf40.chunk.js": "/ReactExamples/static/js/2.648baf40.chunk.js",
-    "static/js/2.648baf40.chunk.js.map": "/ReactExamples/static/js/2.648baf40.chunk.js.map",
-    "static/js/3.f832c39f.chunk.js": "/ReactExamples/static/js/3.f832c39f.chunk.js",
-    "static/js/3.f832c39f.chunk.js.map": "/ReactExamples/static/js/3.f832c39f.chunk.js.map",
+    "main.css": "/ReactExamples/static/css/main.f120b9b3.chunk.css",
+    "main.js": "/ReactExamples/static/js/main.6ce1261d.chunk.js",
+    "main.js.map": "/ReactExamples/static/js/main.6ce1261d.chunk.js.map",
+    "runtime-main.js": "/ReactExamples/static/js/runtime-main.5aac3fd6.js",
+    "runtime-main.js.map": "/ReactExamples/static/js/runtime-main.5aac3fd6.js.map",
+    "static/js/2.0107ddc8.chunk.js": "/ReactExamples/static/js/2.0107ddc8.chunk.js",
+    "static/js/2.0107ddc8.chunk.js.map": "/ReactExamples/static/js/2.0107ddc8.chunk.js.map",
+    "static/js/3.80fc7b0c.chunk.js": "/ReactExamples/static/js/3.80fc7b0c.chunk.js",
+    "static/js/3.80fc7b0c.chunk.js.map": "/ReactExamples/static/js/3.80fc7b0c.chunk.js.map",
     "index.html": "/ReactExamples/index.html",
-    "static/css/main.2573f41c.chunk.css.map": "/ReactExamples/static/css/main.2573f41c.chunk.css.map",
-    "static/js/2.648baf40.chunk.js.LICENSE.txt": "/ReactExamples/static/js/2.648baf40.chunk.js.LICENSE.txt",
+    "static/css/main.f120b9b3.chunk.css.map": "/ReactExamples/static/css/main.f120b9b3.chunk.css.map",
+    "static/js/2.0107ddc8.chunk.js.LICENSE.txt": "/ReactExamples/static/js/2.0107ddc8.chunk.js.LICENSE.txt",
     "static/media/arrow.ed70c401.svg": "/ReactExamples/static/media/arrow.ed70c401.svg",
     "static/media/divinestar.4ced2a35.svg": "/ReactExamples/static/media/divinestar.4ced2a35.svg",
     "static/media/hamburger-icon.a48133d4.svg": "/ReactExamples/static/media/hamburger-icon.a48133d4.svg",
     "static/media/logo.6ce24c58.svg": "/ReactExamples/static/media/logo.6ce24c58.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.3aacefd4.js",
-    "static/js/2.648baf40.chunk.js",
-    "static/css/main.2573f41c.chunk.css",
-    "static/js/main.d1836932.chunk.js"
+    "static/js/runtime-main.5aac3fd6.js",
+    "static/js/2.0107ddc8.chunk.js",
+    "static/css/main.f120b9b3.chunk.css",
+    "static/js/main.6ce1261d.chunk.js"
   ]
 }
