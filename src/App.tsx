@@ -6,6 +6,7 @@ import About from "./Pages/About/About";
 import ComponentsPage from "./Pages/Components/Components";
 import SettingsPage from "./Pages/Settings/Settings";
 import BabylonPage from "./Pages/Babylon/Babylon.page";
+import ClockPage from "./Pages/Clock/Clock.page";
 import Nav from "./components/Nav/Nav";
 
 interface AppProperties {}
@@ -14,6 +15,7 @@ interface AppStates {
   currentTheme: string;
   homePage: boolean;
   babylonPage: boolean;
+  clockPage: boolean;
   componentsPage: boolean;
   aboutPage: boolean;
   settingsPage: boolean;
@@ -26,6 +28,7 @@ class App extends Component<AppProperties, AppStates> {
       currentTheme: "default",
       homePage: true,
       babylonPage: false,
+      clockPage: false,
       componentsPage: false,
       aboutPage: false,
       settingsPage: false,
@@ -38,6 +41,7 @@ class App extends Component<AppProperties, AppStates> {
   setAppPage(name: string) {
     this.setState({ homePage: false });
     this.setState({ babylonPage: false });
+    this.setState({ clockPage: false });
     this.setState({ aboutPage: false });
     this.setState({ componentsPage: false });
     this.setState({ settingsPage: false });
@@ -47,6 +51,9 @@ class App extends Component<AppProperties, AppStates> {
         break;
       case "babylon-page":
         this.setState({ babylonPage: true });
+        break;
+      case "clock-page":
+        this.setState({ clockPage: true });
         break;
       case "components-page":
         this.setState({ componentsPage: true });
@@ -88,8 +95,14 @@ class App extends Component<AppProperties, AppStates> {
   }
 
   render() {
-    const { homePage, babylonPage, componentsPage, aboutPage, settingsPage } =
-      this.state;
+    const {
+      homePage,
+      babylonPage,
+      clockPage,
+      componentsPage,
+      aboutPage,
+      settingsPage,
+    } = this.state;
 
     return (
       <div className={this._getAppClassName()}>
@@ -101,6 +114,7 @@ class App extends Component<AppProperties, AppStates> {
           <div className="meta-grid-content">
             {homePage && <Home />}
             {babylonPage && <BabylonPage />}
+            {clockPage && <ClockPage />}
             {componentsPage && <ComponentsPage />}
             {settingsPage && (
               <SettingsPage

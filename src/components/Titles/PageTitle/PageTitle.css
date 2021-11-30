@@ -1,7 +1,6 @@
 div.page-title-container {
  background-color: var(--app-page-title-container-color);
  border-bottom:5px solid var(--app-page-title-container-bottom-color);
- margin-bottom: 15px;
  padding:10px;
  display: flex;
  align-items: center;

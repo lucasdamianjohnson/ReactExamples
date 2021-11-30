@@ -2,5 +2,6 @@
     font-size: 30px;
     padding-left: 10px;
     color: var(--app-section-title-color);  
+    margin-top: 10px;
     margin-bottom: 10px;
 }

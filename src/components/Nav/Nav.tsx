@@ -80,6 +80,12 @@ export class Nav extends Component<NavProperities, NavStates> {
             Babylon
           </button>
           <button
+            className={this._checkActiveButton("clock-page")}
+            onClick={() => this.setActive("clock-page")}
+          >
+            Clock
+          </button>
+          <button
             className={this._checkActiveButton("components-page")}
             onClick={() => this.setActive("components-page")}
           >
