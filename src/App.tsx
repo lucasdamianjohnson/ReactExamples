@@ -5,6 +5,7 @@ import Home from "./Pages/Home/Home";
 import About from "./Pages/About/About";
 import ComponentsPage from "./Pages/Components/Components";
 import SettingsPage from "./Pages/Settings/Settings";
+import BabylonPage from "./Pages/Babylon/Babylon.page";
 import Nav from "./components/Nav/Nav";
 
 interface AppProperties {}
@@ -12,6 +13,7 @@ interface AppProperties {}
 interface AppStates {
   currentTheme: string;
   homePage: boolean;
+  babylonPage: boolean;
   componentsPage: boolean;
   aboutPage: boolean;
   settingsPage: boolean;
@@ -23,6 +25,7 @@ class App extends Component<AppProperties, AppStates> {
     this.state = {
       currentTheme: "default",
       homePage: true,
+      babylonPage: false,
       componentsPage: false,
       aboutPage: false,
       settingsPage: false,
@@ -34,12 +37,16 @@ class App extends Component<AppProperties, AppStates> {
 
   setAppPage(name: string) {
     this.setState({ homePage: false });
+    this.setState({ babylonPage: false });
     this.setState({ aboutPage: false });
     this.setState({ componentsPage: false });
     this.setState({ settingsPage: false });
     switch (name) {
       case "home-page":
         this.setState({ homePage: true });
+        break;
+      case "babylon-page":
+        this.setState({ babylonPage: true });
         break;
       case "components-page":
         this.setState({ componentsPage: true });
@@ -81,7 +88,8 @@ class App extends Component<AppProperties, AppStates> {
   }
 
   render() {
-    const { homePage, componentsPage, aboutPage, settingsPage } = this.state;
+    const { homePage, babylonPage, componentsPage, aboutPage, settingsPage } =
+      this.state;
 
     return (
       <div className={this._getAppClassName()}>
@@ -92,6 +100,7 @@ class App extends Component<AppProperties, AppStates> {
 
           <div className="meta-grid-content">
             {homePage && <Home />}
+            {babylonPage && <BabylonPage />}
             {componentsPage && <ComponentsPage />}
             {settingsPage && (
               <SettingsPage

@@ -74,6 +74,12 @@ export class Nav extends Component<NavProperities, NavStates> {
             Home
           </button>
           <button
+            className={this._checkActiveButton("babylon-page")}
+            onClick={() => this.setActive("babylon-page")}
+          >
+            Babylon
+          </button>
+          <button
             className={this._checkActiveButton("components-page")}
             onClick={() => this.setActive("components-page")}
           >

@@ -90,9 +90,9 @@ code {
 
   --accordion-expand-icon-color:  var(--divine-purple-1);
   --accordion-title-color:  var(--divine-purple-1);
-  --accordion-title-bg-color: rgba(22, 26, 31, 0.8);
+  --accordion-title-bg-color: rgba(40, 30, 48, 0.8);
   --accordion-content-color:rgb(227, 233, 233);
-  --accordion-content-bg-color: rgba(29, 28, 28, 0.8);
+  --accordion-content-bg-color: rgba(30, 27, 31, 0.8);
 
 }
 

@@ -15,7 +15,6 @@ export class Home extends Component<HomeProperities, HomeStates> {
   constructor(props: HomeProperities) {
     super(props);
   }
-
   render() {
     return (
       <div className="app-content">
@@ -33,7 +32,8 @@ export class Home extends Component<HomeProperities, HomeStates> {
               <p className="info-box-text">
                 This is a website made by Lucas Johnson. It was built using
                 react and hosted using github pages. This was created to serve
-                as an example site for Luke's portfolio.
+                as an example site for Luke's portfolio. The design of this site is meant to be minimalistic. 
+                Just a simple 'zen garden' like website.
               </p>
               <br />
               <p className="info-box-text">
